@@ -2,6 +2,7 @@
 read -p "enter the 3 intiger input with space-" a b c
 	echo "all 3 input=" $a $b $c
 	declare -A allResult
+	declare -a value
 
 	result1=$(($a+$b*$c))
 	echo "result1="$result1
@@ -19,5 +20,12 @@ read -p "enter the 3 intiger input with space-" a b c
         echo "result4="$result4
 	 allResult[Fourth]=$result4
 
-	echo "${!allResult[@]}"
-        echo "${allResult[@]}"
+	echo "[ ${!allResult[@]} ]"
+        echo "[ ${allResult[@]} ]"
+
+		value[0]=${allResult[first]}
+		value[1]=${allResult[second]}
+		value[2]=${allResult[third]}
+		value[3]=${allResult[Fourth]}
+		echo "[ ${value[*]} ]"
+
