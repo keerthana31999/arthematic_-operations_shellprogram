@@ -10,3 +10,7 @@ read -p "enter the 3 intiger input with space" a b c
 
 	 result3=$(($c+$a/$b))
         echo "result3="$result3
+
+	 result4=$(($a%$b+$c))
+        echo "result4="$result4
+
